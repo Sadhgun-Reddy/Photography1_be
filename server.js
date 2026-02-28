@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Database Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/vivek_photography')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Sadhgun_photography')
     .then(() => console.log('MongoDB Connected Successfully'))
     .catch((err) => console.error('MongoDB Connection Error: ', err));
 
@@ -28,7 +28,7 @@ app.use('/api/portfolio', portfolioRoutes);
 
 // Base Route
 app.get('/', (req, res) => {
-    res.send('Vivek Photography API is running...');
+    res.send('Sadhgun Photography API is running...');
 });
 
 // Error Handler
